@@ -54,6 +54,9 @@ jobs:
       contents: read
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
     - name: check directory contents
       run: ls -l
 
