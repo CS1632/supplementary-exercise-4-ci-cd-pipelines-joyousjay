@@ -67,10 +67,10 @@ public class RentACatImpl implements RentACat {
 	public String listCats() {
 		// TODO
 		String list = new String();
-		if (cats==null && cats.size()==0){	
-			return "";
+		// if (cats==null && cats.isEmpty()){	
+		// 	return "";
 
-		}
+		// }
 		for (Cat cat: cats){
 			int catId=cat.getId();
 			if (catAvailable(catId)==true){
@@ -93,7 +93,7 @@ public class RentACatImpl implements RentACat {
 
 	public boolean catExists(int id) {
 		// TODO
-		if(cats!=null && cats.size()>0){
+		if(cats!=null && !cats.isEmpty()){
 			Cat cat= getCat(id);
 			if (cat==null){
 				return false;
@@ -126,7 +126,7 @@ public class RentACatImpl implements RentACat {
 	public boolean catAvailable(int id) {
 
 		// null / zero-element check
-		if (cats == null || cats.size() == 0) {
+		if (cats == null || cats.isEmpty()) {
 			return false;
 		}
 		Cat c = getCat(id);
@@ -155,7 +155,7 @@ public class RentACatImpl implements RentACat {
 	public Cat getCat(int id) {
 
 		// null / zero-element check
-		if (cats == null || cats.size() == 0) {
+		if (cats == null || cats.isEmpty()) {
 			return null;
 		}
 
