@@ -76,7 +76,7 @@ jobs:
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@v2
       
-sonarqube_test:
+  sonarqube_test:
  
     needs: [maven_test]
 
